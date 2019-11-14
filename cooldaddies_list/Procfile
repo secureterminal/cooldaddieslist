@@ -1,0 +1,1 @@
+web: gunicorn cooldaddies_list.wsgi
