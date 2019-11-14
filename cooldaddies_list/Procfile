@@ -1,1 +1,1 @@
-web: gunicorn cooldaddies_list.wsgi
+web: gunicorn --pythonpath cooldaddies_list cooldaddies_list.wsgi
