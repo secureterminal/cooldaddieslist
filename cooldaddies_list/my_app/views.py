@@ -19,7 +19,8 @@ def home(request):
 def new_search(request):
     # get the search query from base.html
     search = str(request.POST.get('search'))
-    models.Search.objects.create(search=search)
+    if search != 'None':
+        models.Search.objects.create(search=search)
 
     final_url = BASE_CRAIGSLIST_URL.format(quote_plus(search))
     # print("Quoted search: ", quote_plus(search))
